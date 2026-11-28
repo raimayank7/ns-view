@@ -98,3 +98,29 @@
   .prl-tbl th,.prl-grp td{-webkit-print-color-adjust:exact;print-color-adjust:exact}
   .prl-tbl tr{break-inside:avoid}
 }
+/* byof-bulkcheck (28 Nov 2026): "Check a whole list" (bulkcheck.js) */
+.bk-steps{margin:6px 0 10px;padding-inline-start:1.3em;font-size:.92rem}
+.bk-steps li{margin:2px 0}
+.bk-drop{display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center;border:2px dashed var(--line);border-radius:var(--r);padding:18px 12px;background:var(--surface2);cursor:pointer}
+.bk-drop:hover,.bk-drop:focus-visible,.bk-drop.on{border-color:var(--accent);outline:none}
+.bk-drop.on{background:color-mix(in srgb,var(--accent) 10%,var(--surface2))}
+.bk-drop .row{justify-content:center;margin:4px 0 0}
+.bk-paste{margin:10px 0}
+.bk-paste summary{cursor:pointer;font-weight:600;min-height:44px;display:flex;align-items:center}
+.bk-paste textarea{width:100%}
+.bk-priv{font-size:.85rem;color:var(--soft);margin:8px 0}
+.bk-res{border-top:1px dashed var(--line);margin-top:12px;padding-top:10px}
+.bk-from{margin:4px 0;overflow-wrap:anywhere}
+.bk-tag{display:inline-block;font-size:.75rem;font-weight:700;border-radius:999px;padding:1px 8px;background:var(--amber,#D97706);color:#fff}
+.bk-sum{list-style:none;padding:0;margin:10px 0;display:flex;flex-wrap:wrap;gap:8px}
+.bk-sum li{border:1px solid var(--line);border-radius:999px;padding:4px 12px;background:var(--surface2);font-size:.9rem}
+.bk-sum li.ok{color:var(--ok)}.bk-sum li.bad{color:var(--bad)}.bk-sum li.dup{color:#7C3AED}.bk-sum li.warn{color:var(--warn,#B45309)}
+.bk-tbl td small{color:var(--soft);font-size:.8rem;overflow-wrap:anywhere}
+.bk-tbl tr.bad td:nth-child(4){color:var(--bad)}
+.gt-list.bk-tbl tr.bad td{color:inherit}
+.bk-tbl tr.dup td:nth-child(4){color:#7C3AED}.bk-tbl tr.warn td:nth-child(4){color:var(--warn,#B45309)}.bk-tbl tr.empty td{color:var(--soft)}
+.bad-note{color:var(--bad)}
+@media (prefers-color-scheme:dark){html:not([data-theme=light]) .bk-tbl tr.dup td:nth-child(4),html:not([data-theme=light]) .bk-sum li.dup{color:#A78BFA}}
+html[data-theme=dark] .bk-tbl tr.dup td:nth-child(4),html[data-theme=dark] .bk-sum li.dup{color:#A78BFA}
+.bk-paste summary::before{content:'▸';display:inline-block;margin-inline-end:8px;transition:transform .15s}
+.bk-paste[open] summary::before{transform:rotate(90deg)}
